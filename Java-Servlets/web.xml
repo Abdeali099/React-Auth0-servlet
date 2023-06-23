@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" id="WebApp_ID" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+      <servlet-name>Authorised-User</servlet-name>
+      <servlet-class>com.afa.authorization.AuthorisedUser</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>Authorised-User</servlet-name>
+      <url-pattern>/api/auth/authorization</url-pattern>
+  </servlet-mapping>
+
+    <filter>
+        <filter-name>Filter_Authorization</filter-name>
+        <filter-class>com.afa.authorization.AuthorisedFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>Filter_Authorization</filter-name>
+        <url-pattern>/api/auth/authorization</url-pattern>
+    </filter-mapping>
+
+</web-app>

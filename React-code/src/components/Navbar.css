@@ -1,0 +1,16 @@
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+}
+
+.btn-primary i {
+    margin-left: 5px;
+}
+
+.regitser-button{
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
